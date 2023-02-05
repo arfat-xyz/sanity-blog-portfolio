@@ -5,6 +5,7 @@ import imageUrlBuilder from "@sanity/image-url";
 import PortableText from "react-portable-text";
 import moment from "moment/moment";
 import Link from "next/link";
+import Image from "next/image";
 // import "/public/assets/styles/main.min.css";
 const Post = ({ blog, author }) => {
   const client = createClient({
@@ -97,84 +98,84 @@ const Post = ({ blog, author }) => {
         />
       </Head>
       <div>
-        {/* <div class="pointer-events-none fixed inset-0 z-70 min-h-screen bg-black bg-opacity-70 opacity-0 transition-opacity lg:hidden">
-          <div class="absolute right-0 min-h-screen w-2/3 bg-primary py-4 px-8 shadow md:w-1/3">
-            <button class="absolute top-0 right-0 mt-4 mr-4">
+        {/* <div className="pointer-events-none fixed inset-0 z-70 min-h-screen bg-black bg-opacity-70 opacity-0 transition-opacity lg:hidden">
+          <div className="absolute right-0 min-h-screen w-2/3 bg-primary py-4 px-8 shadow md:w-1/3">
+            <button className="absolute top-0 right-0 mt-4 mr-4">
               <img
                 src="/assets/img/icon-close.svg"
-                class="h-10 w-auto"
+                className="h-10 w-auto"
                 alt=""
               />
             </button>
 
-            <ul class="mt-8 flex flex-col">
-              <li class="py-2">
+            <ul className="mt-8 flex flex-col">
+              <li className="py-2">
                 <Link
                   href="/#about"
-                  class="pt-0.5 font-header font-semibold uppercase text-white"
+                  className="pt-0.5 font-header font-semibold uppercase text-white"
                 >
                   About
                 </Link>
               </li>
 
-              <li class="py-2">
+              <li className="py-2">
                 <Link
                   href="/#services"
-                  class="pt-0.5 font-header font-semibold uppercase text-white"
+                  className="pt-0.5 font-header font-semibold uppercase text-white"
                 >
                   Services
                 </Link>
               </li>
 
-              <li class="py-2">
+              <li className="py-2">
                 <Link
                   href="/#portfolio"
-                  class="pt-0.5 font-header font-semibold uppercase text-white"
+                  className="pt-0.5 font-header font-semibold uppercase text-white"
                 >
                   Portfolio
                 </Link>
               </li>
 
-              <li class="py-2">
+              <li className="py-2">
                 <Link
                   href="/#clients"
-                  class="pt-0.5 font-header font-semibold uppercase text-white"
+                  className="pt-0.5 font-header font-semibold uppercase text-white"
                 >
                   Clients
                 </Link>
               </li>
 
-              <li class="py-2">
+              <li className="py-2">
                 <Link
                   href="/#work"
-                  class="pt-0.5 font-header font-semibold uppercase text-white"
+                  className="pt-0.5 font-header font-semibold uppercase text-white"
                 >
                   Work
                 </Link>
               </li>
 
-              <li class="py-2">
+              <li className="py-2">
                 <Link
                   href="/#statistics"
-                  class="pt-0.5 font-header font-semibold uppercase text-white"
+                  className="pt-0.5 font-header font-semibold uppercase text-white"
                 >
                   Statistics
                 </Link>
               </li>
 
-              <li class="py-2">
+              <li className="py-2">
                 <Link
                   href="/#blog"
-                  class="pt-0.5 font-header font-semibold uppercase text-white"
+                  className="pt-0.5 font-header font-semibold uppercase text-white"
                 >
                   Blog
                 </Link>
               </li>
 
-              <li class="py-2">
+              <li className="py-2">
                 <Link
                   href="/#contact"
-                  class="pt-0.5 font-header font-semibold uppercase text-white"
+                  className="pt-0.5 font-header font-semibold uppercase text-white"
                 >
                   Contact
                 </Link>
@@ -184,15 +185,15 @@ const Post = ({ blog, author }) => {
         </div> */}
 
         <div>
-          <div class="container py-6 md:py-10">
-            <div class="mx-auto max-w-4xl">
-              <div class="">
-                <h1 class="pt-5 font-body text-3xl font-semibold text-primary sm:text-4xl md:text-5xl xl:text-6xl">
+          <div className="container py-6 md:py-10">
+            <div className="mx-auto max-w-4xl">
+              <div className="">
+                <h1 className="pt-5 font-body text-3xl font-semibold text-primary sm:text-4xl md:text-5xl xl:text-6xl">
                   {blog.title}
                 </h1>
-                <div class="flex items-center pt-5 md:pt-10">
+                <div className="flex items-center pt-5 md:pt-10">
                   <div>
-                    <img
+                    <Image
                       // src="/assets/img/blog-author.jpg"
                       src={builder
                         .image(author.authorimage)
@@ -200,15 +201,17 @@ const Post = ({ blog, author }) => {
                         .height(200)
                         .fit("fillmax")
                         .url()}
-                      class="h-20 w-20 rounded-full border-2 border-grey-70 shadow"
+                      width={200}
+                      height={200}
+                      className="h-20 w-20 rounded-full border-2 border-grey-70 shadow"
                       alt="author image"
                     />
                   </div>
-                  <div class="pl-5">
-                    <span class="block font-body text-xl font-bold text-grey-10">
+                  <div className="pl-5">
+                    <span className="block font-body text-xl font-bold text-grey-10">
                       By {author.name}
                     </span>
-                    <span class="block pt-1 font-body text-xl font-bold text-grey-30">
+                    <span className="block pt-1 font-body text-xl font-bold text-grey-30">
                       {moment(blog._createdAt).format(
                         "MMMM Do YYYY, h:mm:ss a"
                       )}
@@ -216,7 +219,7 @@ const Post = ({ blog, author }) => {
                   </div>
                 </div>
               </div>
-              <div class="prose max-w-none pt-8">
+              <div className="prose max-w-none pt-8">
                 <PortableText
                   // Pass in block content straight from Sanity.io
                   content={blog.content}
@@ -228,8 +231,12 @@ const Post = ({ blog, author }) => {
                     image: (props) => (
                       <>
                         <div className="text-center">
-                          <img
+                          <Image
                             src={builder.image(props.asset).fit("fill").url()}
+                            // fill="auto"
+
+                            width={2000}
+                            height={3000}
                             className="max-h-96"
                             alt={props.alt}
                           />
@@ -243,27 +250,29 @@ const Post = ({ blog, author }) => {
                   }}
                 />
               </div>
-              <div class="flex flex-col  text-white bg-[#5540af] items-center border-t border-lila py-12 pt-12 md:flex-row md:items-start xl:pb-20">
-                <div class="w-3/4 sm:w-2/5 lg:w-1/4 xl:w-1/5">
-                  <img
+              <div className="flex flex-col  text-white bg-[#5540af] items-center border-t border-lila py-12 pt-12 md:flex-row md:items-start xl:pb-20">
+                <div className="w-3/4 sm:w-2/5 lg:w-1/4 xl:w-1/5">
+                  <Image
                     src={builder
                       .image(author.authorimage)
                       .width(200)
                       .height(200)
                       .fit("fillmax")
                       .url()}
-                    class="rounded-full shadow"
+                    width={200}
+                    height={200}
+                    className="rounded-full shadow"
                     alt="author image"
                   />
                 </div>
-                <div class="ml-0 text-center md:ml-10 md:w-5/6 md:text-left">
+                <div className="ml-0 text-center md:ml-10 md:w-5/6 md:text-left">
                   <span className="bg-gray-400 px-5 py-1 rounded-md mb-3">
                     Author
                   </span>
-                  <h3 class="pt-10 font-body text-2xl font-bold md:pt-0">
+                  <h3 className="pt-10 font-body text-2xl font-bold md:pt-0">
                     {author.name}
                   </h3>
-                  <p class="pt-5 font-body text-lg leading-8 sm:leading-9 md:text-xl md:leading-9 lg:leading-9 xl:leading-9">
+                  <p className="pt-5 font-body text-lg leading-8 sm:leading-9 md:text-xl md:leading-9 lg:leading-9 xl:leading-9">
                     {author.desc}
                   </p>
                   <div className="flex items-center justify-center pt-5 pl-2 sm:justify-start sm:pt-0">
@@ -283,9 +292,9 @@ const Post = ({ blog, author }) => {
           </div>
         </div>
 
-        <div class="bg-primary">
-          <div class="container flex flex-col justify-between py-6 sm:flex-row">
-            <p class="text-center font-body text-white md:text-left">
+        <div className="bg-primary">
+          <div className="container flex flex-col justify-between py-6 sm:flex-row">
+            <p className="text-center font-body text-white md:text-left">
               © Copyright 2022. All right reserved, Arfat.xyz.
             </p>
             <div className="flex items-center justify-center pt-5 pl-2 sm:justify-start sm:pt-0">

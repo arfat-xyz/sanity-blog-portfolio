@@ -1,112 +1,116 @@
+import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const NavBar = () => {
   return (
-    <div class="w-full sticky z-50 top-0 py-3 sm:py-5  bg-primary ">
-      <div class="container flex items-center justify-between">
+    <div className="w-full sticky z-50 top-0 py-3 sm:py-5  bg-primary ">
+      <div className="container flex items-center justify-between">
         <div>
-          <a href="/">
-            <img
+          <Link href="/">
+            <Image
               src="/assets/img/logo.svg"
-              class="w-24 lg:w-48"
+              className="w-24 lg:w-48"
+              width={100}
+              height={100}
               alt="logo image"
             />
-          </a>
+          </Link>
         </div>
-        <div class="hidden lg:block">
-          <ul class="flex items-center">
-            <li class="group pl-6">
-              <a
+        <div className="hidden lg:block">
+          <ul className="flex items-center">
+            <li className="group pl-6">
+              <Link
                 href="#about"
-                class="cursor-pointe pt-0.5 font-header font-semibold uppercase text-white"
+                className="cursor-pointe pt-0.5 font-header font-semibold uppercase text-white"
               >
                 About
-              </a>
+              </Link>
 
-              <span class="block h-0.5 w-full bg-transparent group-hover:bg-yellow"></span>
+              <span className="block h-0.5 w-full bg-transparent group-hover:bg-yellow"></span>
             </li>
 
-            <li class="group pl-6">
-              <a
+            <li className="group pl-6">
+              <Link
                 href="#services"
-                class="cursor-pointe pt-0.5 font-header font-semibold uppercase text-white"
+                className="cursor-pointe pt-0.5 font-header font-semibold uppercase text-white"
               >
                 Services
-              </a>
+              </Link>
 
-              <span class="block h-0.5 w-full bg-transparent group-hover:bg-yellow"></span>
+              <span className="block h-0.5 w-full bg-transparent group-hover:bg-yellow"></span>
             </li>
 
-            <li class="group pl-6">
-              <a
+            <li className="group pl-6">
+              <Link
                 href="#portfolio"
-                class="cursor-pointe pt-0.5 font-header font-semibold uppercase text-white"
+                className="cursor-pointe pt-0.5 font-header font-semibold uppercase text-white"
               >
                 Portfolio
-              </a>
+              </Link>
 
-              <span class="block h-0.5 w-full bg-transparent group-hover:bg-yellow"></span>
+              <span className="block h-0.5 w-full bg-transparent group-hover:bg-yellow"></span>
             </li>
 
-            <li class="group pl-6">
-              <a
+            <li className="group pl-6">
+              <Link
                 href="#clients"
-                class="cursor-pointe pt-0.5 font-header font-semibold uppercase text-white"
+                className="cursor-pointe pt-0.5 font-header font-semibold uppercase text-white"
               >
                 Clients
-              </a>
+              </Link>
 
-              <span class="block h-0.5 w-full bg-transparent group-hover:bg-yellow"></span>
+              <span className="block h-0.5 w-full bg-transparent group-hover:bg-yellow"></span>
             </li>
 
-            <li class="group pl-6">
-              <a
+            <li className="group pl-6">
+              <Link
                 href="#work"
-                class="cursor-pointe pt-0.5 font-header font-semibold uppercase text-white"
+                className="cursor-pointe pt-0.5 font-header font-semibold uppercase text-white"
               >
                 Work
-              </a>
+              </Link>
 
-              <span class="block h-0.5 w-full bg-transparent group-hover:bg-yellow"></span>
+              <span className="block h-0.5 w-full bg-transparent group-hover:bg-yellow"></span>
             </li>
 
-            <li class="group pl-6">
-              <a
+            <li className="group pl-6">
+              <Link
                 href="#statistics"
-                class="cursor-pointe pt-0.5 font-header font-semibold uppercase text-white"
+                className="cursor-pointe pt-0.5 font-header font-semibold uppercase text-white"
               >
                 Statistics
-              </a>
+              </Link>
 
-              <span class="block h-0.5 w-full bg-transparent group-hover:bg-yellow"></span>
+              <span className="block h-0.5 w-full bg-transparent group-hover:bg-yellow"></span>
             </li>
 
-            <li class="group pl-6">
-              <a
+            <li className="group pl-6">
+              <Link
                 href="#blog"
-                class="cursor-pointe pt-0.5 font-header font-semibold uppercase text-white"
+                className="cursor-pointe pt-0.5 font-header font-semibold uppercase text-white"
               >
                 Blog
-              </a>
+              </Link>
 
-              <span class="block h-0.5 w-full bg-transparent group-hover:bg-yellow"></span>
+              <span className="block h-0.5 w-full bg-transparent group-hover:bg-yellow"></span>
             </li>
 
-            <li class="group pl-6">
-              <a
+            <li className="group pl-6">
+              <Link
                 href="#contact"
-                class="cursor-pointe pt-0.5 font-header font-semibold uppercase text-white"
+                className="cursor-pointe pt-0.5 font-header font-semibold uppercase text-white"
               >
                 Contact
-              </a>
+              </Link>
 
-              <span class="block h-0.5 w-full bg-transparent group-hover:bg-yellow"></span>
+              <span className="block h-0.5 w-full bg-transparent group-hover:bg-yellow"></span>
             </li>
           </ul>
         </div>
-        <div class="block lg:hidden">
+        <div className="block lg:hidden">
           <button>
-            <i class="bx bx-menu text-4xl text-white"></i>
+            <i className="bx bx-menu text-4xl text-white"></i>
           </button>
         </div>
       </div>

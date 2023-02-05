@@ -5,10 +5,11 @@ import Script from "next/script";
 import Head from "next/head";
 import imageUrlBuilder from "@sanity/image-url";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Home({ blogs, author }) {
-  console.log(blogs);
-  console.log("author");
+  // console.log(blogs);
+  // console.log("author");
   const client = createClient({
     projectId: "w3pjopko",
     dataset: "production",
@@ -91,10 +92,12 @@ export default function Home({ blogs, author }) {
           <div className="pointer-events-none fixed inset-0 z-70 min-h-screen bg-black bg-opacity-70 opacity-0 transition-opacity lg:hidden" />
           <div className="hidden absolute right-0 min-h-screen w-2/3 bg-primary py-4 px-8 shadow md:w-1/3">
             <button className="absolute top-0 right-0 mt-4 mr-4">
-              <img
+              <Image
                 src="/assets/img/icon-close.svg"
                 className="h-10 w-auto"
                 alt=""
+                width={40}
+                height={40}
               />
             </button>
 
@@ -160,13 +163,15 @@ export default function Home({ blogs, author }) {
               <div className="container relative z-30 pt-20 pb-12 sm:pt-56 sm:pb-48 lg:pt-64 lg:pb-48">
                 <div className="flex flex-col items-center justify-center lg:flex-row">
                   <div className="rounded-full border-8 border-primary shadow-xl">
-                    <img
+                    <Image
                       src={builder
                         .image(author.authorimage)
                         .width(200)
                         .height(200)
                         .fit("fillmax")
                         .url()}
+                      width={200}
+                      height={200}
                       className="h-48 rounded-full sm:h-56"
                       alt="author"
                     />
@@ -329,15 +334,19 @@ export default function Home({ blogs, author }) {
                 <div className="group rounded px-8 py-12 shadow hover:bg-primary">
                   <div className="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28">
                     <div className="hidden group-hover:block">
-                      <img
+                      <Image
                         src="/assets/img/icon-development-white.svg"
                         alt="development icon"
+                        width={200}
+                        height={200}
                       />
                     </div>
                     <div className="block group-hover:hidden">
-                      <img
+                      <Image
                         src="/assets/img/icon-development-black.svg"
                         alt="development icon"
+                        width={200}
+                        height={200}
                       />
                     </div>
                   </div>
@@ -353,13 +362,17 @@ export default function Home({ blogs, author }) {
                 <div className="group rounded px-8 py-12 shadow hover:bg-primary">
                   <div className="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28">
                     <div className="hidden group-hover:block">
-                      <img
+                      <Image
                         src="/assets/img/icon-content-white.svg"
                         alt="content marketing icon"
+                        width={200}
+                        height={200}
                       />
                     </div>
                     <div className="block group-hover:hidden">
-                      <img
+                      <Image
+                        width={200}
+                        height={200}
                         src="/assets/img/icon-content-black.svg"
                         alt="content marketing icon"
                       />
@@ -377,13 +390,17 @@ export default function Home({ blogs, author }) {
                 <div className="group rounded px-8 py-12 shadow hover:bg-primary">
                   <div className="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28">
                     <div className="hidden group-hover:block">
-                      <img
+                      <Image
+                        width={200}
+                        height={200}
                         src="/assets/img/icon-mobile-white.svg"
                         alt="Mobile Application icon"
                       />
                     </div>
                     <div className="block group-hover:hidden">
-                      <img
+                      <Image
+                        width={200}
+                        height={200}
                         src="/assets/img/icon-mobile-black.svg"
                         alt="Mobile Application icon"
                       />
@@ -401,13 +418,17 @@ export default function Home({ blogs, author }) {
                 <div className="group rounded px-8 py-12 shadow hover:bg-primary">
                   <div className="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28">
                     <div className="hidden group-hover:block">
-                      <img
+                      <Image
+                        width={200}
+                        height={200}
                         src="/assets/img/icon-email-white.svg"
                         alt="Email Marketing icon"
                       />
                     </div>
                     <div className="block group-hover:hidden">
-                      <img
+                      <Image
+                        width={200}
+                        height={200}
                         src="/assets/img/icon-email-black.svg"
                         alt="Email Marketing icon"
                       />
@@ -425,13 +446,17 @@ export default function Home({ blogs, author }) {
                 <div className="group rounded px-8 py-12 shadow hover:bg-primary">
                   <div className="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28">
                     <div className="hidden group-hover:block">
-                      <img
+                      <Image
+                        width={200}
+                        height={200}
                         src="/assets/img/icon-design-white.svg"
                         alt="Theme Design icon"
                       />
                     </div>
                     <div className="block group-hover:hidden">
-                      <img
+                      <Image
+                        width={200}
+                        height={200}
                         src="/assets/img/icon-design-black.svg"
                         alt="Theme Design icon"
                       />
@@ -449,13 +474,17 @@ export default function Home({ blogs, author }) {
                 <div className="group rounded px-8 py-12 shadow hover:bg-primary">
                   <div className="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28">
                     <div className="hidden group-hover:block">
-                      <img
+                      <Image
+                        width={200}
+                        height={200}
                         src="/assets/img/icon-graphics-white.svg"
                         alt="Graphic Design icon"
                       />
                     </div>
                     <div className="block group-hover:hidden">
-                      <img
+                      <Image
+                        width={200}
+                        height={200}
                         src="/assets/img/icon-graphics-black.svg"
                         alt="Graphic Design icon"
                       />
@@ -486,7 +515,9 @@ export default function Home({ blogs, author }) {
                   href="/"
                   className="mx-auto transform transition-all hover:scale-105 md:mx-0"
                 >
-                  <img
+                  <Image
+                    width={1000}
+                    height={1000}
                     src="/assets/img/portfolio-apple.jpeg"
                     className="w-full shadow"
                     alt="portfolio image"
@@ -496,7 +527,9 @@ export default function Home({ blogs, author }) {
                   href="/"
                   className="mx-auto transform transition-all hover:scale-105 md:mx-0"
                 >
-                  <img
+                  <Image
+                    width={1000}
+                    height={1000}
                     src="/assets/img/portfolio-stripe.jpeg"
                     className="w-full shadow"
                     alt="portfolio image"
@@ -506,7 +539,9 @@ export default function Home({ blogs, author }) {
                   href="/"
                   className="mx-auto transform transition-all hover:scale-105 md:mx-0"
                 >
-                  <img
+                  <Image
+                    width={1000}
+                    height={1000}
                     src="/assets/img/portfolio-fedex.jpeg"
                     className="w-full shadow"
                     alt="portfolio image"
@@ -516,7 +551,9 @@ export default function Home({ blogs, author }) {
                   href="/"
                   className="mx-auto transform transition-all hover:scale-105 md:mx-0"
                 >
-                  <img
+                  <Image
+                    width={1000}
+                    height={1000}
                     src="/assets/img/portfolio-microsoft.jpeg"
                     className="w-full shadow"
                     alt="portfolio image"
@@ -533,14 +570,18 @@ export default function Home({ blogs, author }) {
                   </h2>
                   <div className="flex flex-wrap items-center justify-center pt-4 sm:pt-4">
                     <span className="m-8 block">
-                      <img
+                      <Image
+                        width={500}
+                        height={500}
                         src="/assets/img/logo-coca-cola.svg"
                         alt="client logo"
                         className="mx-auto block h-12 w-auto"
                       />
                     </span>
                     <span className="m-8 block">
-                      <img
+                      <Image
+                        width={500}
+                        height={500}
                         src="/assets/img/logo-apple.svg"
                         alt="client logo"
                         className="mx-auto block h-12 w-auto"
@@ -548,7 +589,9 @@ export default function Home({ blogs, author }) {
                     </span>
 
                     <span className="m-8 block">
-                      <img
+                      <Image
+                        width={500}
+                        height={500}
                         src="/assets/img/logo-netflix.svg"
                         alt="client logo"
                         className="mx-auto block h-12 w-auto"
@@ -556,7 +599,9 @@ export default function Home({ blogs, author }) {
                     </span>
 
                     <span className="m-8 block">
-                      <img
+                      <Image
+                        width={500}
+                        height={500}
                         src="/assets/img/logo-amazon.svg"
                         alt="client logo"
                         className="mx-auto block h-12 w-auto"
@@ -564,7 +609,9 @@ export default function Home({ blogs, author }) {
                     </span>
 
                     <span className="m-8 block">
-                      <img
+                      <Image
+                        width={500}
+                        height={500}
                         src="/assets/img/logo-stripe.svg"
                         alt="client logo"
                         className="mx-auto block h-12 w-auto"
@@ -590,7 +637,9 @@ export default function Home({ blogs, author }) {
                   <div className="md:w-2/5">
                     <div className="flex justify-center md:justify-start">
                       <span className="shrink-0">
-                        <img
+                        <Image
+                          width={500}
+                          height={500}
                           src="/assets/img/logo-spotify.svg"
                           className="h-auto w-32"
                           alt="company logo"
@@ -630,7 +679,9 @@ export default function Home({ blogs, author }) {
                   <div className="md:w-2/5">
                     <div className="flex justify-center md:justify-start">
                       <span className="shrink-0">
-                        <img
+                        <Image
+                          width={500}
+                          height={500}
                           src="/assets/img/logo-microsoft.svg"
                           className="h-auto w-32"
                           alt="company logo"
@@ -670,7 +721,9 @@ export default function Home({ blogs, author }) {
                   <div className="md:w-2/5">
                     <div className="flex justify-center md:justify-start">
                       <span className="shrink-0">
-                        <img
+                        <Image
+                          width={500}
+                          height={500}
                           src="/assets/img/logo-fedex.svg"
                           className="h-auto w-32"
                           alt="company logo"
@@ -721,7 +774,9 @@ export default function Home({ blogs, author }) {
                   <div className="grid grid-cols-2 gap-5 md:gap-8 xl:grid-cols-4 xl:gap-5">
                     <div className="flex flex-col items-center justify-center text-center md:flex-row md:text-left">
                       <div>
-                        <img
+                        <Image
+                          width={500}
+                          height={500}
                           src="/assets/img/icon-project.svg"
                           className="mx-auto h-12 w-auto md:h-20"
                           alt="icon project"
@@ -739,7 +794,9 @@ export default function Home({ blogs, author }) {
 
                     <div className="flex flex-col items-center justify-center text-center md:flex-row md:text-left">
                       <div>
-                        <img
+                        <Image
+                          width={500}
+                          height={500}
                           src="/assets/img/icon-award.svg"
                           className="mx-auto h-12 w-auto md:h-20"
                           alt="icon award"
@@ -757,7 +814,9 @@ export default function Home({ blogs, author }) {
 
                     <div className="mt-6 flex flex-col items-center justify-center text-center md:mt-10 md:flex-row md:text-left lg:mt-0">
                       <div>
-                        <img
+                        <Image
+                          width={500}
+                          height={500}
                           src="/assets/img/icon-happy.svg"
                           className="mx-auto h-12 w-auto md:h-20"
                           alt="icon happy clients"
@@ -775,7 +834,9 @@ export default function Home({ blogs, author }) {
 
                     <div className="mt-6 flex flex-col items-center justify-center text-center md:mt-10 md:flex-row md:text-left lg:mt-0">
                       <div>
-                        <img
+                        <Image
+                          width={500}
+                          height={500}
                           src="/assets/img/icon-puzzle.svg"
                           className="mx-auto h-12 w-auto md:h-20"
                           alt="icon puzzle"
