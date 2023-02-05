@@ -213,7 +213,7 @@ export default function Home({ blogs, author }) {
                     Who am I?
                   </h2>
                   <h4 className="pt-6 font-header text-xl font-medium text-black sm:text-2xl lg:text-3xl">
-                    I'm Christy Smith, a Web Designer & Photographer
+                    I&apos;m Christy Smith, a Web Designer & Photographer
                   </h4>
                   <p className="pt-6 font-body leading-relaxed text-grey-20">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit,
@@ -324,7 +324,7 @@ export default function Home({ blogs, author }) {
 
             <div className="container py-16 md:py-20" id="services">
               <h2 className="text-center font-header text-4xl font-semibold uppercase text-primary sm:text-5xl lg:text-6xl">
-                Here's what I'm good at
+                Here&apos;s what I&apos;m good at
               </h2>
               <h3 className="pt-6 text-center font-header text-xl font-medium text-black sm:text-2xl lg:text-3xl">
                 These are the services Ioffer
@@ -507,7 +507,7 @@ export default function Home({ blogs, author }) {
                 Check out my Portfolio
               </h2>
               <h3 className="pt-6 text-center font-header text-xl font-medium text-black sm:text-2xl lg:text-3xl">
-                Here's what I have done with the past
+                Here&apos;s what I have done with the past
               </h3>
 
               <div className="mx-auto grid w-full grid-cols-1 gap-8 pt-12 sm:w-3/4 md:gap-10 lg:w-full lg:grid-cols-2">
@@ -627,7 +627,7 @@ export default function Home({ blogs, author }) {
                 My work experience
               </h2>
               <h3 className="pt-6 text-center font-header text-xl font-medium text-black sm:text-2xl lg:text-3xl">
-                Here's what I did before freelancing
+                Here&apos;s what I did before freelancing
               </h3>
 
               <div className="relative mx-auto mt-12 flex w-full flex-col lg:w-2/3">
@@ -914,7 +914,7 @@ export default function Home({ blogs, author }) {
 
             <div className="container py-16 md:py-20" id="contact">
               <h2 className="text-center font-header text-4xl font-semibold uppercase text-primary sm:text-5xl lg:text-6xl">
-                Here's a contact form
+                Here&apos;s a contact form
               </h2>
               <h4 className="pt-6 text-center font-header text-xl font-medium text-black sm:text-2xl lg:text-3xl">
                 Have Any Questions?
