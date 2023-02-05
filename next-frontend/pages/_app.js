@@ -1,5 +1,6 @@
 import NavBar from "@/components/NavBar";
 import "@/styles/globals.css";
+import "@/public/assets/styles/main.min.css";
 
 export default function App({ Component, pageProps }) {
   return (

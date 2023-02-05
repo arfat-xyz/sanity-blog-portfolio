@@ -59,7 +59,7 @@ export default function Home({ blogs, author }) {
 
             <meta name="twitter:site" content="@tailwindmade" />
 
-            <link
+            {/* <link
               crossorigin="crossorigin"
               href="https://fonts.gstatic.com"
               rel="preconnect"
@@ -68,14 +68,14 @@ export default function Home({ blogs, author }) {
             <link
               href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
               rel="stylesheet"
-            />
+            /> */}
 
-            <link
+            {/* <link
               crossorigin="anonymous"
               href="/assets/styles/main.min.css"
               media="screen"
               rel="stylesheet"
-            />
+            /> */}
 
             <script
               defer
@@ -185,15 +185,15 @@ export default function Home({ blogs, author }) {
                         </div>
                       </div>
                       <div className="flex items-center justify-center pt-5 pl-2 sm:justify-start sm:pt-0">
-                        <a href="https://www.facebook.com/arfat.xyz">
+                        <Link href="https://www.facebook.com/arfat.xyz">
                           <i className="bx bxl-facebook-square text-2xl text-white hover:text-yellow"></i>
-                        </a>
-                        <a
+                        </Link>
+                        <Link
                           href="https://www.linkedin.com/in/arfatxyz/"
                           className="pl-4"
                         >
                           <i className="bx bxl-linkedin text-2xl text-white hover:text-yellow"></i>
-                        </a>
+                        </Link>
                       </div>
                     </div>
                   </div>
@@ -230,21 +230,21 @@ export default function Home({ blogs, author }) {
                       </div>
                     </div>
                     <div className="flex items-center justify-center pt-5 pl-2 sm:justify-start sm:pt-0">
-                      <a href="/">
+                      <Link href="/">
                         <i className="bx bxl-facebook-square text-2xl text-primary hover:text-yellow"></i>
-                      </a>
-                      <a href="/" className="pl-4">
+                      </Link>
+                      <Link href="/" className="pl-4">
                         <i className="bx bxl-twitter text-2xl text-primary hover:text-yellow"></i>
-                      </a>
-                      <a href="/" className="pl-4">
+                      </Link>
+                      <Link href="/" className="pl-4">
                         <i className="bx bxl-dribbble text-2xl text-primary hover:text-yellow"></i>
-                      </a>
-                      <a href="/" className="pl-4">
+                      </Link>
+                      <Link href="/" className="pl-4">
                         <i className="bx bxl-linkedin text-2xl text-primary hover:text-yellow"></i>
-                      </a>
-                      <a href="/" className="pl-4">
+                      </Link>
+                      <Link href="/" className="pl-4">
                         <i className="bx bxl-instagram text-2xl text-primary hover:text-yellow"></i>
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -482,7 +482,7 @@ export default function Home({ blogs, author }) {
               </h3>
 
               <div className="mx-auto grid w-full grid-cols-1 gap-8 pt-12 sm:w-3/4 md:gap-10 lg:w-full lg:grid-cols-2">
-                <a
+                <Link
                   href="/"
                   className="mx-auto transform transition-all hover:scale-105 md:mx-0"
                 >
@@ -491,8 +491,8 @@ export default function Home({ blogs, author }) {
                     className="w-full shadow"
                     alt="portfolio image"
                   />
-                </a>
-                <a
+                </Link>
+                <Link
                   href="/"
                   className="mx-auto transform transition-all hover:scale-105 md:mx-0"
                 >
@@ -501,8 +501,8 @@ export default function Home({ blogs, author }) {
                     className="w-full shadow"
                     alt="portfolio image"
                   />
-                </a>
-                <a
+                </Link>
+                <Link
                   href="/"
                   className="mx-auto transform transition-all hover:scale-105 md:mx-0"
                 >
@@ -511,8 +511,8 @@ export default function Home({ blogs, author }) {
                     className="w-full shadow"
                     alt="portfolio image"
                   />
-                </a>
-                <a
+                </Link>
+                <Link
                   href="/"
                   className="mx-auto transform transition-all hover:scale-105 md:mx-0"
                 >
@@ -521,7 +521,7 @@ export default function Home({ blogs, author }) {
                     className="w-full shadow"
                     alt="portfolio image"
                   />
-                </a>
+                </Link>
               </div>
             </div>
 
@@ -838,6 +838,16 @@ export default function Home({ blogs, author }) {
                     </Link>
                   ))}
                 </div>
+                <div>
+                  <div className="align-middle text-center mt-10">
+                    <Link
+                      href={"/blogs"}
+                      className="px-10 py-2 bg-[#5540af] text-white rounded-md hover:bg-white hover:text-[#5540af] hover:border-[#5540af] border-2 transition-all duration-700"
+                    >
+                      See all blogs
+                    </Link>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -954,21 +964,21 @@ export default function Home({ blogs, author }) {
                 © Copyright 2022. All right reserved, Arfat.xyz.
               </p>
               <div className="flex items-center justify-center pt-5 sm:justify-start sm:pt-0">
-                <a href="/">
+                <Link href="/">
                   <i className="bx bxl-facebook-square text-2xl text-white hover:text-yellow"></i>
-                </a>
-                <a href="/" className="pl-4">
+                </Link>
+                <Link href="/" className="pl-4">
                   <i className="bx bxl-twitter text-2xl text-white hover:text-yellow"></i>
-                </a>
-                <a href="/" className="pl-4">
+                </Link>
+                <Link href="/" className="pl-4">
                   <i className="bx bxl-dribbble text-2xl text-white hover:text-yellow"></i>
-                </a>
-                <a href="/" className="pl-4">
+                </Link>
+                <Link href="/" className="pl-4">
                   <i className="bx bxl-linkedin text-2xl text-white hover:text-yellow"></i>
-                </a>
-                <a href="/" className="pl-4">
+                </Link>
+                <Link href="/" className="pl-4">
                   <i className="bx bxl-instagram text-2xl text-white hover:text-yellow"></i>
-                </a>
+                </Link>
               </div>
             </div>
           </div>

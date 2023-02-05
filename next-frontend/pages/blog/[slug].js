@@ -4,7 +4,8 @@ import { useRouter } from "next/router";
 import imageUrlBuilder from "@sanity/image-url";
 import PortableText from "react-portable-text";
 import moment from "moment/moment";
-
+import Link from "next/link";
+// import "/public/assets/styles/main.min.css";
 const Post = ({ blog, author }) => {
   const client = createClient({
     projectId: "w3pjopko",
@@ -67,18 +68,18 @@ const Post = ({ blog, author }) => {
           href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Raleway:wght@400;500;600;700&display=swap"
           rel="stylesheet"
         /> */}
-
+        {/* 
         <link
           href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
           rel="stylesheet"
-        />
+        /> */}
 
-        <link
+        {/* <link
           crossorigin="anonymous"
           href="/assets/styles/main.min.css"
           media="screen"
           rel="stylesheet"
-        />
+        /> */}
 
         <script
           defer
@@ -108,75 +109,75 @@ const Post = ({ blog, author }) => {
 
             <ul class="mt-8 flex flex-col">
               <li class="py-2">
-                <a
+                <Link
                   href="/#about"
                   class="pt-0.5 font-header font-semibold uppercase text-white"
                 >
                   About
-                </a>
+                </Link>
               </li>
 
               <li class="py-2">
-                <a
+                <Link
                   href="/#services"
                   class="pt-0.5 font-header font-semibold uppercase text-white"
                 >
                   Services
-                </a>
+                </Link>
               </li>
 
               <li class="py-2">
-                <a
+                <Link
                   href="/#portfolio"
                   class="pt-0.5 font-header font-semibold uppercase text-white"
                 >
                   Portfolio
-                </a>
+                </Link>
               </li>
 
               <li class="py-2">
-                <a
+                <Link
                   href="/#clients"
                   class="pt-0.5 font-header font-semibold uppercase text-white"
                 >
                   Clients
-                </a>
+                </Link>
               </li>
 
               <li class="py-2">
-                <a
+                <Link
                   href="/#work"
                   class="pt-0.5 font-header font-semibold uppercase text-white"
                 >
                   Work
-                </a>
+                </Link>
               </li>
 
               <li class="py-2">
-                <a
+                <Link
                   href="/#statistics"
                   class="pt-0.5 font-header font-semibold uppercase text-white"
                 >
                   Statistics
-                </a>
+                </Link>
               </li>
 
               <li class="py-2">
-                <a
+                <Link
                   href="/#blog"
                   class="pt-0.5 font-header font-semibold uppercase text-white"
                 >
                   Blog
-                </a>
+                </Link>
               </li>
 
               <li class="py-2">
-                <a
+                <Link
                   href="/#contact"
                   class="pt-0.5 font-header font-semibold uppercase text-white"
                 >
                   Contact
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -242,7 +243,7 @@ const Post = ({ blog, author }) => {
                   }}
                 />
               </div>
-              <div class="flex flex-col bg-[#5540af] items-center border-t border-lila py-12 pt-12 md:flex-row md:items-start xl:pb-20">
+              <div class="flex flex-col  text-white bg-[#5540af] items-center border-t border-lila py-12 pt-12 md:flex-row md:items-start xl:pb-20">
                 <div class="w-3/4 sm:w-2/5 lg:w-1/4 xl:w-1/5">
                   <img
                     src={builder
@@ -259,22 +260,22 @@ const Post = ({ blog, author }) => {
                   <span className="bg-gray-400 px-5 py-1 rounded-md mb-3">
                     Author
                   </span>
-                  <h3 class="pt-10 font-body text-2xl font-bold text-secondary md:pt-0">
+                  <h3 class="pt-10 font-body text-2xl font-bold md:pt-0">
                     {author.name}
                   </h3>
-                  <p class="pt-5 font-body text-lg leading-8 text-secondary sm:leading-9 md:text-xl md:leading-9 lg:leading-9 xl:leading-9">
+                  <p class="pt-5 font-body text-lg leading-8 sm:leading-9 md:text-xl md:leading-9 lg:leading-9 xl:leading-9">
                     {author.desc}
                   </p>
                   <div className="flex items-center justify-center pt-5 pl-2 sm:justify-start sm:pt-0">
-                    <a href="https://www.facebook.com/arfat.xyz">
+                    <Link href="https://www.facebook.com/arfat.xyz">
                       <i className="bx bxl-facebook-square text-2xl text-white hover:text-yellow"></i>
-                    </a>
-                    <a
+                    </Link>
+                    <Link
                       href="https://www.linkedin.com/in/arfatxyz/"
                       className="pl-4"
                     >
                       <i className="bx bxl-linkedin text-2xl text-white hover:text-yellow"></i>
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -288,12 +289,15 @@ const Post = ({ blog, author }) => {
               © Copyright 2022. All right reserved, Arfat.xyz.
             </p>
             <div className="flex items-center justify-center pt-5 pl-2 sm:justify-start sm:pt-0">
-              <a href="https://www.facebook.com/arfat.xyz">
+              <Link href="https://www.facebook.com/arfat.xyz">
                 <i className="bx bxl-facebook-square text-2xl text-white hover:text-yellow"></i>
-              </a>
-              <a href="https://www.linkedin.com/in/arfatxyz/" className="pl-4">
+              </Link>
+              <Link
+                href="https://www.linkedin.com/in/arfatxyz/"
+                className="pl-4"
+              >
                 <i className="bx bxl-linkedin text-2xl text-white hover:text-yellow"></i>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
