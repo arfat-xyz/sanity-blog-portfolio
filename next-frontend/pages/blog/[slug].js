@@ -27,12 +27,9 @@ const Post = ({ blog, author }) => {
           name="viewport"
         />
 
-        <title>How to become a frontend developer | Atom Template</title>
+        <title>{blog.title}</title>
 
-        <meta
-          property="og:title"
-          content="How to become a frontend developer | Atom Template"
-        />
+        <meta property="og:title" content={`"${blog.title}"`} />
 
         <meta property="og:locale" content="en_US" />
 
@@ -40,10 +37,7 @@ const Post = ({ blog, author }) => {
 
         <meta property="og:url" content="//post" />
 
-        <meta
-          name="description"
-          content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        />
+        <meta name="description" content={`"${blog.desc}"`} />
 
         <link rel="icon" type="image/png" href="/assets/img/favicon.png" />
 
@@ -56,7 +50,7 @@ const Post = ({ blog, author }) => {
         <meta name="twitter:card" content="summary_large_image" />
 
         <meta name="twitter:site" content="@tailwindmade" />
-
+        {/* 
         <link
           crossorigin="crossorigin"
           href="https://fonts.gstatic.com"
@@ -72,7 +66,7 @@ const Post = ({ blog, author }) => {
         <link
           href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Raleway:wght@400;500;600;700&display=swap"
           rel="stylesheet"
-        />
+        /> */}
 
         <link
           href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
@@ -248,7 +242,7 @@ const Post = ({ blog, author }) => {
                   }}
                 />
               </div>
-              <div class="flex flex-col items-center border-t border-lila py-12 pt-12 md:flex-row md:items-start xl:pb-20">
+              <div class="flex flex-col bg-[#5540af] items-center border-t border-lila py-12 pt-12 md:flex-row md:items-start xl:pb-20">
                 <div class="w-3/4 sm:w-2/5 lg:w-1/4 xl:w-1/5">
                   <img
                     src={builder
@@ -271,21 +265,15 @@ const Post = ({ blog, author }) => {
                   <p class="pt-5 font-body text-lg leading-8 text-secondary sm:leading-9 md:text-xl md:leading-9 lg:leading-9 xl:leading-9">
                     {author.desc}
                   </p>
-                  <div class="flex items-center justify-center pt-5 md:justify-start">
-                    <a href="/">
-                      <i class="bx bxl-facebook-square text-2xl text-primary hover:text-yellow"></i>
+                  <div className="flex items-center justify-center pt-5 pl-2 sm:justify-start sm:pt-0">
+                    <a href="https://www.facebook.com/arfat.xyz">
+                      <i className="bx bxl-facebook-square text-2xl text-white hover:text-yellow"></i>
                     </a>
-                    <a href="/" class="pl-4">
-                      <i class="bx bxl-twitter text-2xl text-primary hover:text-yellow"></i>
-                    </a>
-                    <a href="/" class="pl-4">
-                      <i class="bx bxl-dribbble text-2xl text-primary hover:text-yellow"></i>
-                    </a>
-                    <a href="/" class="pl-4">
-                      <i class="bx bxl-linkedin text-2xl text-primary hover:text-yellow"></i>
-                    </a>
-                    <a href="/" class="pl-4">
-                      <i class="bx bxl-instagram text-2xl text-primary hover:text-yellow"></i>
+                    <a
+                      href="https://www.linkedin.com/in/arfatxyz/"
+                      className="pl-4"
+                    >
+                      <i className="bx bxl-linkedin text-2xl text-white hover:text-yellow"></i>
                     </a>
                   </div>
                 </div>
@@ -299,21 +287,12 @@ const Post = ({ blog, author }) => {
             <p class="text-center font-body text-white md:text-left">
               © Copyright 2022. All right reserved, Arfat.xyz.
             </p>
-            <div class="flex items-center justify-center pt-5 sm:justify-start sm:pt-0">
-              <a href="/">
-                <i class="bx bxl-facebook-square text-2xl text-white hover:text-yellow"></i>
+            <div className="flex items-center justify-center pt-5 pl-2 sm:justify-start sm:pt-0">
+              <a href="https://www.facebook.com/arfat.xyz">
+                <i className="bx bxl-facebook-square text-2xl text-white hover:text-yellow"></i>
               </a>
-              <a href="/" class="pl-4">
-                <i class="bx bxl-twitter text-2xl text-white hover:text-yellow"></i>
-              </a>
-              <a href="/" class="pl-4">
-                <i class="bx bxl-dribbble text-2xl text-white hover:text-yellow"></i>
-              </a>
-              <a href="/" class="pl-4">
-                <i class="bx bxl-linkedin text-2xl text-white hover:text-yellow"></i>
-              </a>
-              <a href="/" class="pl-4">
-                <i class="bx bxl-instagram text-2xl text-white hover:text-yellow"></i>
+              <a href="https://www.linkedin.com/in/arfatxyz/" className="pl-4">
+                <i className="bx bxl-linkedin text-2xl text-white hover:text-yellow"></i>
               </a>
             </div>
           </div>

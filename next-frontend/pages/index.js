@@ -16,66 +16,9 @@ export default function Home({ blogs, author }) {
     useCdn: false,
   });
   const builder = imageUrlBuilder(client);
-  // console.log(builder.image(blogs[0].blogimage).width(200).url());
-  // const myPortableTextComponents = {
-  //   types: {
-  //     image: ({ value }) => <img src={value.imageUrl} />,
-  //     callToAction: ({ value, isInline }) =>
-  //       isInline ? (
-  //         <a href={value.url}>{value.text}</a>
-  //       ) : (
-  //         <div className="callToAction">{value.text}</div>
-  //       ),
-  //   },
-  // };
+
   return (
     <>
-      {/* <PortableText
-        // Pass in block content straight from Sanity.io
-        content={blogs[0].content}
-        projectId="iytovi01"
-        dataset="production"
-        // Optionally override marks, decorators, blocks, etc. in a flat
-        // structure without doing any gymnastics
-        serializers={{
-          h1: (props) => <h1 style={{ color: "red" }} {...props} />,
-          image: (props) => (
-            <>
-              <div className="text-center">
-                <img
-                  src={builder.image(props.asset).fit("fill").url()}
-                  className="max-h-96"
-                  alt={props.alt}
-                />
-              </div>
-              <pre>{JSON.stringify(props, null, 2)}</pre>
-            </>
-          ),
-          li: ({ children }) => (
-            <li className="special-list-item">{children}</li>
-          ),
-        }}
-      /> */}
-      {/* <div className="home mx-8">
-        <h1>{blogs[0].title}</h1>
-        <div className="mx-8">
-          <PortableText
-            // Pass in block content straight from Sanity.io
-            content={blogs[0].content}
-            projectId="iytovi01"
-            dataset="production"
-            // Optionally override marks, decorators, blocks, etc. in a flat
-            // structure without doing any gymnastics
-            serializers={{
-              h1: (props) => <h1 style={{ color: "red" }} {...props} />,
-              li: ({ children }) => (
-                <li className="special-list-item">{children}</li>
-              ),
-            }}
-          />
-        </div>
-        <span>I am homepage</span>
-      </div> */}
       <>
         <>
           <Script src="/assets/js/main.js"></Script>
@@ -120,17 +63,6 @@ export default function Home({ blogs, author }) {
               crossorigin="crossorigin"
               href="https://fonts.gstatic.com"
               rel="preconnect"
-            />
-
-            <link
-              as="style"
-              href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Raleway:wght@400;500;600;700&display=swap"
-              rel="preload"
-            />
-
-            <link
-              href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Raleway:wght@400;500;600;700&display=swap"
-              rel="stylesheet"
             />
 
             <link
@@ -253,20 +185,14 @@ export default function Home({ blogs, author }) {
                         </div>
                       </div>
                       <div className="flex items-center justify-center pt-5 pl-2 sm:justify-start sm:pt-0">
-                        <a href="/">
+                        <a href="https://www.facebook.com/arfat.xyz">
                           <i className="bx bxl-facebook-square text-2xl text-white hover:text-yellow"></i>
                         </a>
-                        <a href="/" className="pl-4">
-                          <i className="bx bxl-twitter text-2xl text-white hover:text-yellow"></i>
-                        </a>
-                        <a href="/" className="pl-4">
-                          <i className="bx bxl-dribbble text-2xl text-white hover:text-yellow"></i>
-                        </a>
-                        <a href="/" className="pl-4">
+                        <a
+                          href="https://www.linkedin.com/in/arfatxyz/"
+                          className="pl-4"
+                        >
                           <i className="bx bxl-linkedin text-2xl text-white hover:text-yellow"></i>
-                        </a>
-                        <a href="/" className="pl-4">
-                          <i className="bx bxl-instagram text-2xl text-white hover:text-yellow"></i>
                         </a>
                       </div>
                     </div>
@@ -1025,7 +951,7 @@ export default function Home({ blogs, author }) {
           <div className="bg-primary">
             <div className="container flex flex-col justify-between py-6 sm:flex-row">
               <p className="text-center font-body text-white md:text-left">
-                © Copyright 2022. All right reserved, ATOM.
+                © Copyright 2022. All right reserved, Arfat.xyz.
               </p>
               <div className="flex items-center justify-center pt-5 sm:justify-start sm:pt-0">
                 <a href="/">
