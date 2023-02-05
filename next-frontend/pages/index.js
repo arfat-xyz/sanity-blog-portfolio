@@ -6,7 +6,9 @@ import Head from "next/head";
 import imageUrlBuilder from "@sanity/image-url";
 import Link from "next/link";
 
-export default function Home({ blogs }) {
+export default function Home({ blogs, author }) {
+  console.log(blogs);
+  console.log("author");
   const client = createClient({
     projectId: "w3pjopko",
     dataset: "production",
@@ -15,8 +17,45 @@ export default function Home({ blogs }) {
   });
   const builder = imageUrlBuilder(client);
   // console.log(builder.image(blogs[0].blogimage).width(200).url());
+  // const myPortableTextComponents = {
+  //   types: {
+  //     image: ({ value }) => <img src={value.imageUrl} />,
+  //     callToAction: ({ value, isInline }) =>
+  //       isInline ? (
+  //         <a href={value.url}>{value.text}</a>
+  //       ) : (
+  //         <div className="callToAction">{value.text}</div>
+  //       ),
+  //   },
+  // };
   return (
     <>
+      {/* <PortableText
+        // Pass in block content straight from Sanity.io
+        content={blogs[0].content}
+        projectId="iytovi01"
+        dataset="production"
+        // Optionally override marks, decorators, blocks, etc. in a flat
+        // structure without doing any gymnastics
+        serializers={{
+          h1: (props) => <h1 style={{ color: "red" }} {...props} />,
+          image: (props) => (
+            <>
+              <div className="text-center">
+                <img
+                  src={builder.image(props.asset).fit("fill").url()}
+                  className="max-h-96"
+                  alt={props.alt}
+                />
+              </div>
+              <pre>{JSON.stringify(props, null, 2)}</pre>
+            </>
+          ),
+          li: ({ children }) => (
+            <li className="special-list-item">{children}</li>
+          ),
+        }}
+      /> */}
       {/* <div className="home mx-8">
         <h1>{blogs[0].title}</h1>
         <div className="mx-8">
@@ -191,7 +230,7 @@ export default function Home({ blogs }) {
                   <div className="rounded-full border-8 border-primary shadow-xl">
                     <img
                       src={builder
-                        .image(blogs[0].blogimage)
+                        .image(author.authorimage)
                         .width(200)
                         .height(200)
                         .fit("fillmax")
@@ -843,7 +882,7 @@ export default function Home({ blogs }) {
                     <Link
                       key={item.slug.current}
                       href={`blog/${item.slug.current}`}
-                      className="shadow  overflow-hidden"
+                      className="shadow bg-white overflow-hidden"
                     >
                       <div
                         style={{
@@ -1020,10 +1059,16 @@ export async function getServerSideProps() {
     apiVersion: "2022-03-25",
     useCdn: false,
   });
-  const blogs = await client.fetch(`*[_type == "blog"]`);
+  const blogs = await client.fetch(
+    `*[_type == "blog"][0...3]{title,slug,metadesc,blogimage,content}`
+  );
+  const authors = await client.fetch(
+    `*[_type == "author" && _id == '4d17fe6c-73bd-447e-b3dc-acd6f1fb71a3' ] `
+  );
   return {
     props: {
       blogs,
+      author: authors[0],
     },
   };
 }

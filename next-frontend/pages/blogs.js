@@ -27,7 +27,7 @@ const Blogs = ({ blogs }) => {
             <Link
               key={item.slug.current}
               href={`blog/${item.slug.current}`}
-              className="shadow  overflow-hidden hover:shadow-2xl transition-all duration-300"
+              className="shadow bg-white overflow-hidden hover:shadow-2xl transition-all duration-300"
             >
               <div
                 style={{
